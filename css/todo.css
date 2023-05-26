@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing:border-box;
     font-size: 10px;
 }
 
@@ -10,30 +10,38 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    padding: 100px 0;
-    background-color: rgb(241,243,244);
+    background-color: rgb(39, 119, 139);
 }
 
-.toDo_container{
+.list_container{
+    position: relative;
     width: 300px;
     min-height: 300px;
-    background-color: rgb(250,250,250);
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    border-radius: 4px;
 }
 
-.toDo--header{
+.list--header{
     width: 100%;
     height: 36px;
-    background-color: rgb(63,81,181);
     padding: 8px;
     display: flex;
     align-items: center;
-    color: #fff;
+    justify-content: center;
+    color: rgb(42, 42, 42);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2rem;
     font-weight: 500;
+    border-bottom: 1px solid rgb(213, 211, 211);
+    border-radius: 4px 4px 0 0;
+    text-align: center;
 }
 
 .list-todo{
+    position: absolute;
+    bottom: 8px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -55,7 +63,7 @@ form{
 }
 
 label{
-    color: #adadad;
+    color: rgb(42, 42, 42);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.22rem;
     font-weight: 300;
@@ -64,7 +72,7 @@ label{
 input{
     width: 100%;
     height: 30px;
-    background-color:rgb(250,250,250);
+    background-color:rgb(254, 255, 255);
    border-top: none;
    border-left: none;
    border-right: none;
@@ -76,47 +84,63 @@ input:focus{
 outline: none;
 }
 
-.add{
+.add--icon-container{
     position: absolute;
     bottom: 4px;
     right: 8px;
     cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: rgb(45, 34, 199);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .eachWork{
     width: 100%;
-    padding: 0 8px;
+    padding: 4px 8px;
     display: flex;
     flex-direction: column;
     
 }
 
 .task{
+    position: relative;
     width: 100%;
+    min-height: 48px;
     border: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color:aqua;
+    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0,0.1);
     border-radius: 4px;
     padding: 4px;
     margin-top: 4px;
+    background: linear-gradient(to right,#30e730 2%,#fff 2%);
 }
 
 .task--text{
+    width: 80%;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 500;
+    margin-left: 8px;
+    color: rgb(42, 42, 42);
 }
 
 .delete{
-    width: 40px;
-    height: 20px;
-    background-color: blue;
-    color: #fff;
+    position: absolute;
+    top: 12px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    color: #a2a2a2;
     border: none;
-    box-shadow: 0.5px 0 0 0.5px rgb(0,0, 0,0.8);
+    border-radius: 4px;
     cursor: pointer;
+    background-color: #139913;
 }
 
 button:active{
